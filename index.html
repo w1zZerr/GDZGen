@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Stylish column multiplication result */
+    #oms_ans {
+      background: #f7e6f0;
+      border-radius: 12px;
+      padding: 24px 16px;
+      margin-top: 18px;
+      font-size: 1.35rem;
+      box-shadow: 0 2px 12px rgba(193,154,164,0.10);
+      min-width: 320px;
+      display: inline-block;
+    }
+    #longMultiplicationCalculator h2 {
+      color: #c19aa4;
+      margin-bottom: 12px;
+      font-size: 2rem;
+    }
+    #longMultiplicationCalculator input, #longMultiplicationCalculator select, #longMultiplicationCalculator button {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #c19aa4;
+      margin: 0 4px;
+    }
+    #longMultiplicationCalculator input:focus {
+      outline: 2px solid #c19aa4;
+    }
+    #oms_nabor {
+      background: #c19aa4;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #oms_nabor:hover {
+      background: #a87b8a;
+    }
+    @media (max-width: 900px) {
+      #longMultiplicationCalculator {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 2vw;
+      }
+      #oms_ans {
+        min-width: 0 !important;
+        width: 100% !important;
+        font-size: 1.05rem !important;
+        padding: 12px 4px !important;
+        box-sizing: border-box;
+      }
+      #longMultiplicationCalculator input,
+      #longMultiplicationCalculator select,
+      #longMultiplicationCalculator button {
+        font-size: 1rem;
+        padding: 6px 6px;
+        width: 90%;
+        margin: 4px 0;
+        box-sizing: border-box;
+      }
+      #longMultiplicationCalculator div[style*='display:table'] {
+        display: block !important;
+      }
+      #longMultiplicationCalculator div[style*='display:table-cell'] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+    }
+    @media (max-width: 600px) {
+      #oms_ans {
+        font-size: 0.95rem !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button id="playSongBtn" title="Пидор">
+    <img src="./you.jpg" style="width:40px;height:40px;object-fit:contain;display:block;" draggable="false" />
+  </button>
+  <audio id="femboyAudio" src="Юбочка Чулочки - ЧВК Фембойчик.mp3" preload="auto"></audio>
+
+<header>
+    <div class="Zaholovok"> 
+        <img src="https://i.ibb.co/jPqQZN3S/123123.png">
+    </div>
+
+    <nav>
+
+        <a href="">< ГДЗ ></a>
+        <a href="">КАЛЬКУЛЯТОР В СТОПЧИК</a>
+        <a class="" href="">РОЗКЛАД</a>   
+     <a href="">КНИЖКИ</a>
+     <a href="">ГОДДИННИК</a>
+    </nav>
+
+
+
+    <div class="Zaholovok">
+
+
+
+        <h2>Привiт баран</h2>
+        <h1 class="Colored">Nextgen ГДЗ</h1>
+        </div>
+        
+        </div>
+    </header>
+
+    <main>
+      <button id="toTopBtn" title="Наверх">↑</button>
+
+    <h1 class="Colored">ГДЗ</h1> 
+    <h1 class="Opis">ГДЗ [ Vshkole, gdzonline, shkolainua ]</h1>
+  <script>
+  // Кнопка "проиграть/пауза песню"
+  const playSongBtn = document.getElementById('playSongBtn');
+  const femboyAudio = document.getElementById('femboyAudio');
+  playSongBtn.onclick = function() {
+    if (femboyAudio.paused) {
+      femboyAudio.volume = 1;
+      femboyAudio.play();
+    } else {
+      femboyAudio.pause();
+    }
+  };
+  // Кнопка "наверх"
+  const toTopBtn = document.getElementById('toTopBtn');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+      toTopBtn.style.display = 'block';
+    } else {
+      toTopBtn.style.display = 'none';
+    }
+  });
+  toTopBtn.onclick = function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+  // Скрыта по умолчанию
+  toTopBtn.style.display = 'none';
+  </script>
+
+<a class="fuck" href="#algebra">
+   <div class="overflow_container">
+    <div class="item">
+          <img class="image" src="алгебра.jpg">
+          <p class="Opis">ГДЗ Алгебра</p>
+</div></a>
+
+    <a class="fuck" href="#geometriya">
+    <div class="item">
+        <img class="image" src="гео.jpg">
+        <p class="Opis">ГДЗ Геометрiя</p>
+
+  </div></a>
+ <a class="fuck" href="#biologiya">
+  <div class="item">
+    <img class="image" src="Биология.jpeg">
+    <p class="Opis">ГДЗ Бiологiя</p>
+
+</div></a>
+ <a class="fuck" href="#ukrainska_mova">
+<div class="item">
+    <img class="image" src="укр.jpg">
+    <p class="Opis">ГДЗ Українська мова</p>
+
+</div></a>
+<a class="fuck" href="#geografiya">
+<div class="item">
+    <img class="image" src="geo.jpg">
+    <p class="Opis">ГДЗ Географiя</p>
+
+</div></a>
+<a class="fuck" href="#fizika">
+<div class="item">
+    <img class="image" src="bye.JPG">
+    <p class="Opis"> ГДЗ Фiзика</p>
+
+</div></a>
+    <a class="fuck" href="#zarubizhna_literatura">
+<div class="item">
+    <img class="image" src="зар.png">
+    <p class="Opis">ГДЗ Зарубiжна Лiтература</p>
+
+</div></a>
+<a class="fuck" href="#poska">
+<div class="item">
+    <img class="image" src="polsk_7_Ceselsca_2024.png">
+    <p class="Opis">ГДЗ Польска мова</p>
+
+</div></a>
+<a class="fuck" href="#zdorovia_bezpeka">
+<div class="item">
+    <img class="image" src="zdorovia-7-klas-voroncova-2024.jpg">
+    <p class="Opis">ГДЗ Здоров'я Без.</p>
+
+</div></a>
+<a class="fuck" href="#istoriya">
+<div class="item">
+    <img class="image" src="Istoriya-Ukr-7-klas-Shchupak-2024.jpg">
+    <p class="Opis">ГДЗ Iсторiя</p>
+
+</div></a>
+<a class="fuck" href="#ukrainska_literatura">
+<div class="item">
+    <img class="image" src="2c0ef5_w1600.jpg">
+    <p class="Opis">ГДЗ Укр Лiтература</p>
+
+</div></a>
+<a class="fuck" href="#himia">
+<div class="item">
+    <img class="image" src="хим.jpg">
+    <p class="Opis">ГДЗ Хiмiя</p>
+
+</div></a>
+
+</div>
+   <h1 class="Colored">Калькулятор Множення В Стопчик</h1>
+   <h1 class="Opis">New games</h1>
+  <section class="lib" id="oms_blok1">
+
+<!-- Long Multiplication Calculator -->
+  <section id="longMultiplicationCalculator">
+    <h2>Калькулятор умножения столбиком</h2>
+    <div style="display:table;margin:auto;">
+      <div style="text-align:center;display:table-cell;vertical-align:middle;">
+        <input id="oms_c1" class="oms_input_int_long" tabIndex="1" placeholder="Число 1">
+      </div>
+      <div style="text-align:center;display:table-cell;vertical-align:middle;">
+        <select id="Op" class="sign" tabIndex="2">
+          <option value="×" selected>×</option>
+        </select>
+      </div>
+      <div style="text-align:center;display:table-cell;vertical-align:middle;">
+        <input id="oms_c2" class="oms_input_int_long" tabIndex="3" placeholder="Число 2">
+      </div>
+      <div style="text-align:center;display:table-cell;vertical-align:middle;">
+        <input id="oms_nabor" type="button" value="=" class="oms_button_calc" tabIndex="4">
+      </div>
+      <div style="text-align:center;display:table-cell;vertical-align:middle;">
+        <div class="art" id="oms_ans"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Long Multiplication Logic with true columnar shift
+    document.getElementById('oms_nabor').addEventListener('click', function() {
+      const num1 = document.getElementById('oms_c1').value.trim();
+      const num2 = document.getElementById('oms_c2').value.trim();
+      if (!/^-?\d+(\.\d+)?$/.test(num1) || !/^-?\d+(\.\d+)?$/.test(num2)) {
+        document.getElementById('oms_ans').innerHTML = '<span style="color:red;">Ошибка: Введите оба числа!</span>';
+        return;
+      }
+      // Only integer column multiplication for simplicity
+      const n1 = num1.split('.')[0];
+      const n2 = num2.split('.')[0];
+      let steps = '';
+      let partials = [];
+      for (let i = n2.length - 1; i >= 0; i--) {
+        const digit = parseInt(n2[i]);
+        if (isNaN(digit)) continue;
+        let partial = (parseInt(n1) * digit).toString();
+        // Сдвиг влево: добавляем пробелы слева
+        let shift = n2.length - 1 - i;
+        partials.push(' '.repeat(shift) + partial);
+      }
+      // Определяем ширину для выравнивания
+      let maxLen = Math.max(n1.length, n2.length + 2, ...partials.map(p => p.length));
+      steps += `<div style='font-family:monospace;text-align:right;font-size:1.5em;'>`;
+      steps += `${n1.padStart(maxLen, ' ')}<br>`;
+      steps += `×${n2.padStart(maxLen - 1, ' ')}<br>`;
+      steps += `${'-'.repeat(maxLen)}<br>`;
+      for (let i = 0; i < partials.length; i++) {
+        steps += `${partials[i].padStart(maxLen, ' ')}<br>`;
+      }
+      if (partials.length > 1) {
+        steps += `${'-'.repeat(maxLen)}<br>`;
+      }
+      const result = (parseInt(n1) * parseInt(n2)).toString();
+      steps += `<strong style='color:#c19aa4;'>${result.padStart(maxLen, ' ')}</strong>`;
+      steps += `</div>`;
+      document.getElementById('oms_ans').innerHTML = steps;
+    });
+  </script>
+</div>
+<h1 class="Colored">Розклад Урокiв</h1>
+    </main>
+<img src="myspace.jpg">
+<h1 class="Colored">Книжки</h1>
+<h1 class="Opis">Тут будуть книжки</h1>
+
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-geometria-ister-2024.pdf">Геометрiя</a>
+<a class="dayn" href="https://pidruchnyk.com.ua/2838-biologiia-zadorozhnyi-7-klas-2024.html">Биология</a>
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-ukrmova-avramenko-2024.pdf">Укр Мова</a>
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-geografia-kobernik-2024.pdf">Географiя</a>
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-zarlit-nikolenko-2024.pdf">Зар Лит</a>
+<a class="dayn" href="https://pidruchnyk.com.ua/2771-polska-mova-ceselska-musameg-7-klas-2024.html">Полська</a>
+<a id="poska" class="dayn" href="https://lib.imzo.gov.ua/wa-data/public/site/books2/7-kl-nush/%D0%97%D0%91%D0%94%207%20%D0%BA%D0%BB%D0%B0%D1%81%2025.08.2024_%D0%B0%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%96_%D0%BA%D0%BE%D0%B4%D0%B8_compressed.pdf">Здоров'я</a>
+<a class="dayn" href="https://pidruchnyk.com.ua/2852-istoriia-ukrainy-shchupak-7-klas-2024.html">История Українська</a>
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-vsesvitnia-istoriia-shchupak-2020.pdf">ВсеСвiтня История</a>
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-himia-grygorovych-2024.pdf">Химия</a>
+
+<a class="dayn" href="https://files.pidruchnyk.com.ua/uploads/book/7-klas-algebra-ister-2024.pdf">Алгебра Істер 7 клас</a>
+  <h1 class="Colored">------ГДЗ------</h1>
+<h1 id="algebra" class="Colored">Алгебра</h1>
+<a class="dayn" href="https://gdzonline.net/455-ister-algebra-7-klas.html">ГДЗонлайн</a>
+<a class="dayn" href="https://vshkole.com/7-klass/reshebniki/algebra/os-ister-2024">ВШколе</a>
+<a class="dayn" href="https://shkola.in.ua/2209-hdz-alhebra-7-klas-ister-2015.html">School.In.Ua</a>
+<h1 id="geometriya" class="Colored">Геометрiя</h1>
+<a class="dayn" href="https://gdzonline.net/468-geometriya-7-klas-ister.html">ГДЗонлайн</a>
+<a class="dayn" href="https://vshkole.com/7-klass/reshebniki/geometriya/os-ister-2024-nush">ВШколе</a>
+<a class="dayn" href="https://shkola.in.ua/2218-hdz-heometriia-7-klas-ister-2015.html">School.In.Ua</a>
+<h1 id="ukrainska_mova" class="Colored">Українська Мова</h1>
+<a class="dayn" href="https://gdzonline.net/885-ukrmova-7-klas-avramenko.html">ГДЗонлайн</a>
+<a class="dayn" href="https://vshkole.com/7-klass/reshebniki/ukrayinska-mova/om-avramenko-2024-nush">ВШколе</a>
+<a class="dayn" href="https://shkola.in.ua/3079-hdz-ukrainska-mova-7-klas-avramenko.html">School.In.Ua</a>
+<h1 id="biologiya" class="Colored">Биология</h1>
+<a class="dayn" href="https://gdzonline.net/635-himiya-7-klas-grygorovych.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/2228-hdz-khimiia-7-klas-hryhorovych-2015.html">School.In.Ua</a>
+<h1 id="geografiya" class="Colored">Географiя</h1>
+<a class="dayn" href="https://shkola.in.ua/3170-hdz-heohrafiia-7-klas-kobernik.html">School.In.Ua</a>
+<h1 id="fizika" class="Colored">Физика</h1>
+<a class="dayn" href="https://gdzonline.net/473-fizika-7-klas-baryahtar.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/2226-hdz-fizyka-7-klas-bar-iakhtar-2015.html">School.In.Ua</a>
+<h1 id="zarubizhna_literatura" class="Colored">Зарубiжна Лiтература</h1>
+<a class="dayn" href="https://gdzonline.net/888-zarubizhna-7-nikolenko.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/3142-hdz-zarubizhna-literatura-7-klas-nikolenko.html">School.In.Ua</a>
+
+<h1 id="zdorovya_bezpeka" class="Colored">Здоров'я Без.</h1>
+<a class="dayn" href="https://shkola.in.ua/3150-hdz-zdorov-ia-bezpeka-ta-dobrobut-7-klas-vorontsova-2024.html">School.In.Ua</a>
+<h1 id="istoriya_vsesvitnya" class="Colored">Iсторiя ВсеСвiтня</h1>
+<a class="dayn" href="https://gdzonline.net/897-vsesvitnia-istoriia-7-klas-shchupak.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/2761-hdz-vsesvitnia-istoriia-7-klas-shchupak-2020.html">School.In.Ua</a>
+<h1 id="istoriya_ukrainska"  class="Colored">Iсторiя Українська</h1>
+<a class="dayn" href="https://gdzonline.net/896-istoriia-ukrainy-7-klas-shchupak.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/3133-hdz-istoriia-ukrainy-7-klas-shchupak.html">School.In.Ua</a>
+<h1 id="ukrainska_literatura" class="Colored">Українська Лiтература</h1>
+<a class="dayn" href="https://shkola.in.ua/3133-hdz-istoriia-ukrainy-7-klas-shchupak.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/3109-hdz-ukrainska-literatura-7-klas-avramenko.html">School.In.Ua</a>
+<h1 id="himiya" class="Colored">Хiмiя</h1>
+<a class="dayn" href="https://gdzonline.net/635-himiya-7-klas-grygorovych.html">ГДЗонлайн</a>
+<a class="dayn" href="https://shkola.in.ua/2228-hdz-khimiia-7-klas-hryhorovych-2015.html">School.In.Ua</a>
+
+<footer>
+  
+  
+   </footer>
+</body>
+</html>
